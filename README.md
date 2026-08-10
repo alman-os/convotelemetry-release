@@ -1,3 +1,5 @@
+![convoTelemetry window](https://github.com/alman-os/convotelemetry-release/blob/main/convoTelemetry_horizontal_brandified.png)
+
 # convoTelemetry
 
 **Turn a long ChatGPT or Claude conversation into a visual map — using your own chat, no API key, nothing leaving your Mac.**
@@ -6,7 +8,23 @@ You paste a short prompt into a conversation you're already having. The AI hands
 
 It's a desktop app for people who have long, sprawling AI conversations and want to see the shape of them.
 
-![convoTelemetry window](convoTelemetry_window.png)
+![convoTelemetry window](https://github.com/alman-os/convotelemetry-release/blob/main/convoTelemetry_1_UI-main-view_brandified.png)
+
+<table>
+  <tr>
+    <td>
+      <a href="https://youtu.be/CliYf4wyBLc">
+        <img src="https://github.com/alman-os/convotelemetry-release/blob/main/yt-thumbnail.png" alt="Watch the video" width="300">
+      </a>
+    </td>
+    <td>
+      <h3>ConvoTelemetry - Turn AI Conversations Into Visual Project Maps
+</h3>
+      <p> 👈🏻 Watch the Youtube Explainer here!
+</p>
+    </td>
+  </tr>
+</table>
 
 ## Table of Contents
 
@@ -33,7 +51,7 @@ It's a desktop app for people who have long, sprawling AI conversations and want
 
 **Requirements:** macOS on Apple Silicon (M1 or newer). The current build is `aarch64` only — it will not run on Intel Macs.
 
-1. Download `convoTelemetry_0.2.0_aarch64.dmg` from the [Releases page](https://github.com/alman-os/convoTelemetry/releases).
+1. Download `convoTelemetry_0.2.0_aarch64.dmg` from the [Releases page](https://langscript.gumroad.com/l/convo-telemetry).
 2. Open the DMG and drag **convoTelemetry** into Applications.
 3. Launch it from Applications or Spotlight.
 
@@ -60,6 +78,8 @@ The core loop is copy → run in your chat → paste back.
 
 ## What Can You Do With This
 
+![project view ConvoTelemetry](https://github.com/alman-os/convotelemetry-release/blob/main/convoTelemetry_2_UI-projectView_cleaned_brandified.png)
+
 - **See where a long brainstorm actually went** — the jumps and clusters show the path you took, including the tangents you forgot about.
 - **Keep a browsable archive of your best AI sessions** — the library is searchable by title, topic, and mood, and every file is plain JSON you can open anywhere.
 - **Track how a project conversation evolved** — checkpoint snapshots give you a timeline of each update instead of overwriting history.
@@ -77,18 +97,6 @@ Your maps are JSON files in `~/Documents/AOS/convoTelemetry/`. Delete the folder
 - **Stack:** Tauri v2 (Rust shell) + React 19 + Vite + TypeScript + Tailwind CSS.
 - **Graph:** a custom force-directed canvas engine — repulsion, link attraction, center gravity, drag, and center-anchored zoom.
 - **Storage:** one session folder per journey, a canonical `<slug>.json` plus append-only `checkpoints/`, all under `~/Documents/AOS/convoTelemetry/`.
-
-**Build from source:**
-
-```bash
-git clone https://github.com/alman-os/convoTelemetry.git
-cd convoTelemetry/app
-npm install
-npm run tauri dev      # run locally
-npm run tauri build    # produce a .app and .dmg
-```
-
-You'll need Node, Rust, and the Xcode command-line tools. For an Intel build, add the target with `rustup target add x86_64-apple-darwin` and build with `--target x86_64-apple-darwin`.
 
 ## Contributing
 
